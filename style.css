@@ -1585,7 +1585,13 @@ h2 {
 }
 
 .facilities-section .section-heading {
+    display: block;
+    max-width: 760px;
     margin-bottom: 28px;
+}
+
+.facilities-section .cards.six {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .faq-section .section-heading {
@@ -1798,6 +1804,10 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .facilities-section .cards.six {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .room-detail {
         grid-template-columns: 1fr;
     }
@@ -1900,6 +1910,10 @@ footer {
     .cards,
     .cards.six,
     .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .facilities-section .cards.six {
         grid-template-columns: 1fr;
     }
 
