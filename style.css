@@ -278,14 +278,19 @@ a {
 .section-label {
     display: inline-flex;
     align-items: center;
-    padding: 7px 15px;
+    justify-content: center;
+    width: fit-content;
+    padding: 8px 16px;
     border-radius: var(--radius-pill);
     color: var(--primary-dark);
-    background: rgba(255, 255, 255, 0.78);
-    font-size: 0.75rem;
+    background: #ffffff;
+    border: 1px solid rgba(11, 99, 206, 0.14);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+    font-size: 0.82rem;
     font-weight: 900;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    letter-spacing: 0;
+    line-height: 1.15;
+    text-transform: none;
 }
 
 .hero .eyebrow {
@@ -709,6 +714,10 @@ a {
     color: var(--muted);
 }
 
+.section .section-label {
+    color: #073f88;
+}
+
 h2,
 h3 {
     font-family: "Space Grotesk", sans-serif;
@@ -1098,6 +1107,12 @@ h2 {
 .gallery-intro > p {
     margin: 0;
     color: var(--muted);
+}
+
+.section-heading > .section-label,
+.gallery-intro .section-label {
+    color: #073f88;
+    justify-self: start;
 }
 
 .room-showcase {
@@ -1608,7 +1623,21 @@ h2 {
 }
 
 .faq-section .section-heading {
+    display: block;
+    max-width: 760px;
     margin-bottom: 26px;
+}
+
+.faq-section .section-heading .section-label {
+    margin-bottom: 14px;
+}
+
+.faq-section .section-heading h2 {
+    margin-top: 0;
+}
+
+.faq-section .section-heading > p:not(.section-label) {
+    margin-top: 14px;
 }
 
 .faq-next-step {
