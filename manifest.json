@@ -9,7 +9,7 @@
   "background_color": "#f6f9fc",
   "icons": [
     {
-      "src": "favicon.svg",
+      "src": "images/logo.svg?v=20260708-logo-icon",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
