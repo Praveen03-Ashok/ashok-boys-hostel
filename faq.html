@@ -40,6 +40,8 @@ function gtag_report_conversion(url) {
   <meta content="Frequently asked questions about Ashok Boys Hostel near SASTRA SRC Campus." property="og:description"/>
   <meta content="images/hero.jpg" property="og:image"/>
   <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+  <meta content="#0b63ce" name="theme-color"/>
+  <link href="manifest.json" rel="manifest"/>
   <link href="style.css" rel="stylesheet"/>
   <script type="application/ld+json">
    {
@@ -88,16 +90,6 @@ function gtag_report_conversion(url) {
     ]
 }
   </script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18298483586">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-18298483586');
-</script>
  </head>
  <body>
   <header class="site-header">
@@ -110,10 +102,10 @@ function gtag_report_conversion(url) {
       Ashok Boys Hostel
      </span>
     </a>
-    <button class="menu-toggle">
+    <button aria-controls="main-navigation" aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" type="button">
      ☰
     </button>
-    <nav class="main-nav">
+    <nav class="main-nav" id="main-navigation">
      <a href="index.html">
       Home
      </a>
@@ -167,12 +159,24 @@ function gtag_report_conversion(url) {
       Frequently asked questions
      </h1>
      <p>
-      Clear answers for students and parents.
+       Quick answers for students and parents before calling or visiting.
      </p>
     </div>
    </section>
-   <section class="section">
-    <div class="container faq-list">
+   <section class="section faq-section">
+    <div class="container">
+     <div class="section-heading">
+      <p class="section-label">
+       Common Questions
+      </p>
+      <h2>
+       Know the essentials before enquiry
+      </h2>
+      <p>
+       Room rent, facilities, food, Wi-Fi and enquiry details are answered below.
+      </p>
+     </div>
+     <div class="faq-list">
      <details>
       <summary>
        What is the monthly rent?
@@ -237,6 +241,28 @@ function gtag_report_conversion(url) {
        Call +91 94436 65708 or +91 81051 55151, or send WhatsApp.
       </p>
      </details>
+     </div>
+     <div class="faq-next-step">
+      <div>
+       <p class="section-label">
+        Still deciding?
+       </p>
+       <h2>
+        Check rooms, photos and location before enquiry.
+       </h2>
+      </div>
+      <div class="home-enquiry-actions">
+       <a class="btn primary" href="rooms.html">
+        View Rooms
+       </a>
+       <a class="btn ghost" href="gallery.html">
+        See Photos
+       </a>
+       <a class="btn whatsapp" href="https://wa.me/919443665708?text=Hi%2C%20I%20would%20like%20to%20check%20current%20room%20availability%20at%20Ashok%20Boys%20Hostel.">
+        WhatsApp
+       </a>
+      </div>
+     </div>
     </div>
    </section>
   </main>

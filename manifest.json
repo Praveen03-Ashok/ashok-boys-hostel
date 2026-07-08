@@ -1,15 +1,18 @@
 {
   "name": "Ashok Boys Hostel",
   "short_name": "Ashok Hostel",
-  "start_url": "index.html",
+  "description": "Affordable boys-only student hostel near SASTRA SRC Campus, Kumbakonam.",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "theme_color": "#0b63ce",
   "background_color": "#f6f9fc",
   "icons": [
     {
       "src": "favicon.svg",
-      "sizes": "64x64",
-      "type": "image/svg+xml"
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
     }
   ]
 }

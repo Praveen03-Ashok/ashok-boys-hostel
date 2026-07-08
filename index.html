@@ -40,6 +40,8 @@ function gtag_report_conversion(url) {
   <meta content="Affordable boys hostel near SASTRA SRC Campus, Kumbakonam. Rooms from ₹2,000/month with beds, fans, common bathrooms, CCTV and owner supervision." property="og:description"/>
   <meta content="images/hero.jpg" property="og:image"/>
   <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+  <meta content="#0b63ce" name="theme-color"/>
+  <link href="manifest.json" rel="manifest"/>
   <link href="style.css" rel="stylesheet"/>
   <script type="application/ld+json">
    {
@@ -88,16 +90,6 @@ function gtag_report_conversion(url) {
     ]
 }
   </script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18298483586">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-18298483586');
-</script>
  </head>
  <body>
   <header class="site-header">
@@ -113,10 +105,10 @@ function gtag_report_conversion(url) {
       Ashok Boys Hostel
      </span>
     </a>
-    <button class="menu-toggle">
-     ☰
+    <button aria-controls="main-navigation" aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" type="button">
+     <span aria-hidden="true">☰</span>
     </button>
-    <nav class="main-nav">
+    <nav class="main-nav" id="main-navigation">
      <a class="active" href="index.html">
       Home
      </a>
@@ -181,16 +173,10 @@ function gtag_report_conversion(url) {
       <p>
        Affordable, safe and simple student accommodation managed by a retired police officer. Facilities include beds, ceiling fans, common bathrooms and CCTV surveillance.
       </p>
-      <div class="badges">
-       <span>
-        Admissions Open
-       </span>
-       <span>
-        Rooms Available
-       </span>
-       <span>
-        Actual Photos
-       </span>
+      <div class="badges hero-links" aria-label="Quick links">
+       <a href="rooms.html">Explore Rooms</a>
+       <a href="contact.html">Check Availability</a>
+       <a href="gallery.html">View Actual Photos</a>
       </div>
       <div class="actions">
        <a class="btn primary" href="tel:+919443665708">
@@ -203,7 +189,7 @@ function gtag_report_conversion(url) {
      </div>
      <aside class="booking-card">
       <div class="available">
-       ● Rooms Available
+       ● Room enquiries open
       </div>
       <div class="price">
        From
@@ -234,9 +220,10 @@ function gtag_report_conversion(url) {
         CCTV surveillance
        </li>
       </ul>
-      <a class="btn whatsapp full" href="https://wa.me/919443665708">
-       Send WhatsApp Message
+      <a class="btn whatsapp full" href="https://wa.me/919443665708?text=Hi%2C%20I%20would%20like%20to%20check%20current%20room%20availability%20at%20Ashok%20Boys%20Hostel.">
+       Check availability on WhatsApp
       </a>
+      <a class="booking-secondary-link" href="rooms.html">Compare 2 &amp; 4 sharing rooms →</a>
      </aside>
     </div>
    </section>
@@ -258,86 +245,76 @@ function gtag_report_conversion(url) {
        Managed by a retired police officer, it is a practical choice for parents and students looking for a disciplined boys-only hostel near campus.
       </p>
       <div class="stats">
-       <div>
+       <a href="rooms.html">
         <b>
          ₹2,000
         </b>
         <span>
          Starting monthly rent
         </span>
-       </div>
-       <div>
+       </a>
+       <a href="rooms.html">
         <b>
          2 / 4
         </b>
         <span>
          Sharing room options
         </span>
-       </div>
-       <div>
+       </a>
+       <a href="facilities.html">
         <b>
          CCTV
         </b>
         <span>
          Surveillance
         </span>
-       </div>
+       </a>
       </div>
      </div>
     </div>
    </section>
    <section class="section light">
     <div class="container">
-     <p class="section-label">
-      Why Parents Choose Us
-     </p>
+     <p class="section-label">Explore the hostel</p>
      <h2>
-      Clear, honest and student-focused
+      Find what you need before you enquire
      </h2>
-     <div class="cards">
-      <div class="card">
-       <i>
-        👮
-       </i>
-       <h3>
-        Owner Supervision
-       </h3>
-       <p>
-        Managed by a retired police officer.
-       </p>
+     <p class="pathways-intro">Compare room types, browse real photos, check the facilities and plan your route to campus.</p>
+     <div class="cards home-pathways">
+      <a class="card" href="rooms.html">
+       <i>🛏️</i>
+       <h3>Rooms &amp; Pricing</h3>
+       <p>Compare 2-sharing and 4-sharing accommodation.</p>
+       <span class="card-link">Explore rooms →</span>
+      </a>
+      <a class="card" href="gallery.html">
+       <i>📷</i>
+       <h3>Actual Photos</h3>
+       <p>See real rooms, common bathrooms and the building.</p>
+       <span class="card-link">Open gallery →</span>
+      </a>
+      <a class="card" href="facilities.html">
+       <i>✓</i>
+       <h3>Facilities</h3>
+       <p>Check exactly what is—and is not—included.</p>
+       <span class="card-link">View facilities →</span>
+      </a>
+      <a class="card" href="location.html">
+       <i>📍</i>
+       <h3>Location &amp; Route</h3>
+       <p>See the address and walking route to SASTRA SRC.</p>
+       <span class="card-link">Plan your route →</span>
+      </a>
+     </div>
+     <div class="home-enquiry-strip">
+      <div>
+       <p class="section-label">Ready to enquire?</p>
+       <h2>Ask about current room availability</h2>
+       <p>Tell us your preferred sharing option and expected joining date.</p>
       </div>
-      <div class="card">
-       <i>
-        💰
-       </i>
-       <h3>
-        Affordable Rent
-       </h3>
-       <p>
-        Rooms from approximately ₹2,000 per month.
-       </p>
-      </div>
-      <div class="card">
-       <i>
-        📍
-       </i>
-       <h3>
-        Near Campus
-       </h3>
-       <p>
-        Located near SASTRA SRC Campus.
-       </p>
-      </div>
-      <div class="card">
-       <i>
-        📷
-       </i>
-       <h3>
-        Actual Photos
-       </h3>
-       <p>
-        Real room and bathroom photos included.
-       </p>
+      <div class="home-enquiry-actions">
+       <a class="btn whatsapp" href="https://wa.me/919443665708?text=Hi%2C%20I%20would%20like%20to%20check%20room%20availability.%20My%20preferred%20room%20is%3A%20">WhatsApp us</a>
+       <a class="btn secondary" href="contact.html">Enquiry details</a>
       </div>
      </div>
     </div>

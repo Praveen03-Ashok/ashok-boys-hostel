@@ -12,13 +12,15 @@
   <meta content="Ashok Boys Hostel is located at #6, Bharath Nagar, Near SASTRA SRC Campus, Kumbakonam." property="og:description"/>
   <meta content="images/hero.jpg" property="og:image"/>
   <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+  <meta content="#0b63ce" name="theme-color"/>
+  <link href="manifest.json" rel="manifest"/>
   <link href="style.css" rel="stylesheet"/>
   <script type="application/ld+json">
    {
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
     "name": "Ashok Boys Hostel",
-    "description": "Affordable boys hostel near SASTRA SRC Campus in Kumbakonam. Rooms from ₹2,000 per person per month with beds, ceiling fans, common bathrooms, CCTV surveillance and owner supervision.",
+    "description": "Affordable boys hostel near SASTRA SRC Campus in Kumbakonam. Rooms from Rs. 2,000 per person per month with beds, ceiling fans, common bathrooms, CCTV surveillance and owner supervision.",
     "address": {
         "@type": "PostalAddress",
         "streetAddress": "#6, Bharath Nagar, Near SASTRA SRC Campus",
@@ -30,7 +32,7 @@
         "+91-94436-65708",
         "+91-81051-55151"
     ],
-    "priceRange": "₹2,000/month",
+    "priceRange": "Rs. 2,000/month",
     "amenityFeature": [
         {
             "@type": "LocationFeatureSpecification",
@@ -82,10 +84,10 @@
       Ashok Boys Hostel
      </span>
     </a>
-    <button class="menu-toggle">
-     ☰
+    <button aria-controls="main-navigation" aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" type="button">
+     <span aria-hidden="true">&#9776;</span>
     </button>
-    <nav class="main-nav">
+    <nav class="main-nav" id="main-navigation">
      <a href="index.html">
       Home
      </a>
@@ -116,16 +118,16 @@
   <div class="trust-bar">
    <div class="container">
     <span>
-     👮 Managed by a retired police officer
+     Managed by a retired police officer
     </span>
     <span>
-     📍 Near SASTRA SRC Campus
+     Near SASTRA SRC Campus
     </span>
     <span>
-     🔒 Boys-only hostel
+     Boys-only hostel
     </span>
     <span>
-     🎥 CCTV surveillance
+     CCTV surveillance
     </span>
    </div>
   </div>
@@ -143,25 +145,71 @@
      </p>
     </div>
    </section>
-   <section class="section">
-    <div class="container location-grid">
-     <div>
-      <p class="section-label">
-       Directions
-      </p>
-      <h2>
-       Easy to locate for students and parents
-      </h2>
-      <p>
-       Use the map below or click the button to open directions in Google Maps.
-      </p>
-      <a class="btn primary" href="https://www.google.com/maps/search/?api=1&amp;query=%236%20Bharath%20Nagar%20Near%20SASTRA%20SRC%20Campus%20Kumbakonam" target="_blank">
-       Open in Google Maps
-      </a>
+   <section class="section location-section">
+    <div class="container">
+     <div class="location-intro">
+      <div>
+       <p class="section-label">Location &amp; directions</p>
+       <h2>A convenient walk from SASTRA SRC Campus</h2>
+       <p>
+        Ashok Boys Hostel is at <strong>#6, Bharath Nagar, near 4 Roads, Kumbakonam</strong>.
+        SASTRA University's Srinivasa Ramanujan Centre is approximately
+        <strong>400-500 metres away</strong>, so students can usually walk to campus in
+        about <strong>5-7 minutes</strong>.
+       </p>
+      </div>
+      <address class="address-card">
+       <span class="address-icon" aria-hidden="true">&#128205;</span>
+       <div>
+        <strong>Ashok Boys Hostel</strong>
+        <span>#6, Bharath Nagar, near 4 Roads</span>
+        <span>Kumbakonam, Tamil Nadu 612001</span>
+       </div>
+      </address>
      </div>
-     <div class="map-card">
-      <iframe loading="lazy" src="https://www.google.com/maps?q=%236%20Bharath%20Nagar%20Near%20SASTRA%20SRC%20Campus%20Kumbakonam&amp;output=embed" title="Ashok Boys Hostel map">
-      </iframe>
+
+     <div class="distance-cards" aria-label="Distance from SASTRA SRC Campus">
+      <div class="distance-card">
+       <span aria-hidden="true">&#128694;</span>
+       <h3>400-500 m</h3>
+       <p>Approximate walking distance</p>
+      </div>
+      <div class="distance-card">
+       <span aria-hidden="true">&#9201;</span>
+       <h3>5-7 min</h3>
+       <p>Typical walking time</p>
+      </div>
+      <div class="distance-card">
+       <span aria-hidden="true">&#127891;</span>
+       <h3>SASTRA SRC</h3>
+       <p>Nearby university campus</p>
+      </div>
+     </div>
+
+     <div class="location-grid">
+      <div class="map-card">
+       <iframe
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Ashok%20Boys%20Hostel%20Bharath%20Nagar%20Kumbakonam&amp;output=embed"
+        title="Map showing Ashok Boys Hostel in Bharath Nagar, Kumbakonam"
+       ></iframe>
+      </div>
+      <div class="directions-card">
+       <p class="section-label">Plan your visit</p>
+       <h2>Open the exact route in Google Maps</h2>
+       <p>Use the route link for turn-by-turn directions between the hostel and SASTRA SRC Campus.</p>
+       <div class="location-actions">
+        <a class="btn primary" href="https://www.google.com/maps/dir/?api=1&amp;origin=Ashok+Boys+Hostel,+Bharath+Nagar,+Kumbakonam&amp;destination=SASTRA+University+Srinivasa+Ramanujan+Centre,+Kumbakonam&amp;travelmode=walking" rel="noopener noreferrer" target="_blank">
+         View walking route
+        </a>
+        <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Ashok+Boys+Hostel,+Bharath+Nagar,+Kumbakonam" rel="noopener noreferrer" target="_blank">
+         Find the hostel
+        </a>
+       </div>
+       <p class="route-note">Travel times are approximate and may vary by the route taken.</p>
+      </div>
      </div>
     </div>
    </section>
@@ -228,5 +276,5 @@
   </div>
   <script src="app.js">
   </script>
- </body>
+</body>
 </html>

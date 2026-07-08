@@ -40,6 +40,8 @@ function gtag_report_conversion(url) {
   <meta content="Facilities include beds, fans, common bathrooms, CCTV and owner supervision. No Wi-Fi, meals, laundry, parking or power backup." property="og:description"/>
   <meta content="images/hero.jpg" property="og:image"/>
   <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+  <meta content="#0b63ce" name="theme-color"/>
+  <link href="manifest.json" rel="manifest"/>
   <link href="style.css" rel="stylesheet"/>
   <script type="application/ld+json">
    {
@@ -88,16 +90,6 @@ function gtag_report_conversion(url) {
     ]
 }
   </script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18298483586">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-18298483586');
-</script>
  </head>
  <body>
   <header class="site-header">
@@ -110,10 +102,10 @@ function gtag_report_conversion(url) {
       Ashok Boys Hostel
      </span>
     </a>
-    <button class="menu-toggle">
+    <button aria-controls="main-navigation" aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" type="button">
      ☰
     </button>
-    <nav class="main-nav">
+    <nav class="main-nav" id="main-navigation">
      <a href="index.html">
       Home
      </a>
@@ -167,12 +159,23 @@ function gtag_report_conversion(url) {
       Essential student hostel facilities
      </h1>
      <p>
-      Clear and honest details about what is available and what is not.
+       A practical view of what students get inside the hostel, with clear notes on what is not included.
      </p>
     </div>
    </section>
-   <section class="section">
+   <section class="section facilities-section">
     <div class="container">
+     <div class="section-heading">
+      <p class="section-label">
+       Available Facilities
+      </p>
+      <h2>
+       Simple, essential and student-focused
+      </h2>
+      <p>
+       The hostel keeps the offering straightforward: accommodation basics, safety supervision and a location close to campus.
+      </p>
+     </div>
      <div class="cards six">
       <div class="card">
        <i>
@@ -251,6 +254,9 @@ function gtag_report_conversion(url) {
      <h2>
       Please note before enquiry
      </h2>
+     <p class="facility-note">
+      These details are listed clearly so parents and students can decide quickly before visiting.
+     </p>
      <div class="not-available">
       <span>
        No Wi‑Fi
@@ -270,6 +276,26 @@ function gtag_report_conversion(url) {
       <span>
        No attached bathrooms
       </span>
+     </div>
+    </div>
+   </section>
+   <section class="section">
+    <div class="container home-enquiry-strip">
+     <div>
+      <p class="section-label">
+       Need a room?
+      </p>
+      <h2>
+       Check room options and current availability.
+      </h2>
+     </div>
+     <div class="home-enquiry-actions">
+      <a class="btn primary" href="rooms.html">
+       View Rooms
+      </a>
+      <a class="btn whatsapp" href="https://wa.me/919443665708?text=Hi%2C%20I%20would%20like%20to%20check%20current%20room%20availability%20at%20Ashok%20Boys%20Hostel.">
+       WhatsApp Enquiry
+      </a>
      </div>
     </div>
    </section>

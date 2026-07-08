@@ -419,6 +419,289 @@ a {
     grid-template-columns: 0.9fr 1.1fr;
     gap: 48px;
 }
+/* =========================================================
+   Distance Cards
+   Premium Glassmorphism Style
+   ========================================================= */
+
+.distance-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin: 35px 0;
+}
+
+.distance-card {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+
+    padding: 26px 22px;
+
+    text-align: center;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.92),
+            rgba(247,250,255,.82)
+        );
+
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+
+    border: 1px solid rgba(255,255,255,.70);
+
+    box-shadow:
+        0 18px 42px rgba(0,60,140,.10),
+        inset 0 1px 0 rgba(255,255,255,.90);
+
+    transition:
+        transform .45s cubic-bezier(.22,1,.36,1),
+        box-shadow .45s,
+        border-color .45s;
+}
+
+/* ----------------------------------
+   Glossy Reflection
+---------------------------------- */
+
+.distance-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -90%;
+    left: -120%;
+
+    width: 65%;
+    height: 260%;
+
+    transform: rotate(28deg);
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,0),
+            rgba(255,255,255,.75),
+            rgba(255,255,255,0)
+        );
+
+    transition: left .9s ease;
+
+    pointer-events: none;
+}
+
+/* ----------------------------------
+   Soft Glow Layer
+---------------------------------- */
+
+.distance-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -2px;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,153,255,.35),
+            rgba(0,255,255,.18),
+            rgba(120,90,255,.25)
+        );
+
+    filter: blur(22px);
+
+    opacity: 0;
+
+    z-index: -1;
+
+    transition: opacity .45s ease;
+}
+
+/* ----------------------------------
+   Hover
+---------------------------------- */
+
+.distance-card:hover {
+
+    transform:
+        translateY(-12px)
+        scale(1.05);
+
+    border-color: #6bc9ff;
+
+    box-shadow:
+        0 28px 60px rgba(0,119,255,.22),
+        0 0 45px rgba(0,180,255,.18),
+        inset 0 1px 0 rgba(255,255,255,.95);
+}
+
+.distance-card:hover::before {
+
+    left: 170%;
+
+}
+
+.distance-card:hover::after {
+
+    opacity: 1;
+
+}
+
+/* ----------------------------------
+   Icon
+---------------------------------- */
+
+.distance-card span {
+
+    width: 82px;
+    height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 18px;
+
+    font-size: 2.6rem;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0077ff,
+            #00c6ff
+        );
+
+    color: white;
+
+    box-shadow:
+        0 12px 28px rgba(0,119,255,.28);
+
+    transition:
+        transform .45s,
+        box-shadow .45s;
+}
+
+.distance-card:hover span {
+
+    transform:
+        scale(1.18)
+        rotate(-6deg);
+
+    box-shadow:
+        0 0 35px rgba(0,162,255,.55),
+        0 0 60px rgba(0,162,255,.22);
+}
+
+/* ----------------------------------
+   Heading
+---------------------------------- */
+
+.distance-card h3,
+.distance-card h4 {
+
+    margin: 0 0 10px;
+
+    color: var(--primary-dark);
+
+    font-size: 1.15rem;
+
+    font-weight: 800;
+
+    transition: color .35s;
+}
+
+.distance-card:hover h3,
+.distance-card:hover h4 {
+
+    color: #0067ff;
+
+}
+
+/* ----------------------------------
+   Text
+---------------------------------- */
+
+.distance-card p {
+
+    margin: 0;
+
+    color: #667085;
+
+    font-size: .95rem;
+
+    line-height: 1.6;
+
+    font-weight: 600;
+
+    transition: color .35s;
+}
+
+.distance-card:hover p {
+
+    color: #4d6175;
+
+}
+
+/* ----------------------------------
+   Different Glow Colors
+---------------------------------- */
+
+.distance-card:nth-child(1)::after {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,119,255,.35),
+            rgba(0,255,255,.18)
+        );
+
+}
+
+.distance-card:nth-child(2)::after {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,200,255,.30),
+            rgba(120,90,255,.22)
+        );
+
+}
+
+.distance-card:nth-child(3)::after {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,193,7,.30),
+            rgba(0,170,255,.18)
+        );
+
+}
+
+/* ----------------------------------
+   Responsive
+---------------------------------- */
+
+@media (max-width:900px) {
+
+    .distance-cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
 
 .section p,
 .card p,
@@ -658,6 +941,109 @@ h2 {
 /* =========================================================
    Page Hero
    ========================================================= */
+.hero-links a {
+    padding: 8px 15px;
+    border-radius: var(--radius-pill);
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-weight: 900;
+    text-decoration: none;
+    backdrop-filter: blur(14px);
+}
+
+.hero-links a:hover,
+.hero-links a:focus-visible {
+    color: var(--primary-dark);
+    background: #ffffff;
+    transform: translateY(-2px);
+}
+
+.booking-secondary-link {
+    display: block;
+    margin-top: 15px;
+    color: var(--primary-dark);
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 900;
+}
+
+.stats a {
+    padding: 18px;
+    color: inherit;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
+    text-decoration: none;
+}
+
+.stats a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 38px rgba(11, 99, 206, 0.16);
+}
+
+.pathways-intro {
+    max-width: 680px;
+    margin: 0 0 32px;
+    color: var(--muted);
+}
+
+.home-pathways .card {
+    display: flex;
+    flex-direction: column;
+    color: inherit;
+    text-decoration: none;
+}
+
+.home-pathways .card-link {
+    display: inline-flex;
+    justify-content: center;
+    margin-top: auto;
+    padding-top: 18px;
+    color: var(--primary);
+    font-weight: 900;
+}
+
+.home-enquiry-strip {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 34px;
+    align-items: center;
+    margin-top: 38px;
+    padding: clamp(28px, 4vw, 46px);
+    color: #ffffff;
+    background:
+        radial-gradient(circle at 85% 15%, rgba(18, 152, 232, 0.38), transparent 32%),
+        linear-gradient(135deg, var(--dark), var(--primary-dark));
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+}
+
+.home-enquiry-strip .section-label {
+    color: #dff3ff;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.home-enquiry-strip h2 {
+    margin: 14px 0 6px;
+    color: #ffffff;
+    font: 800 clamp(1.7rem, 3vw, 2.7rem)/1.1 "Space Grotesk", sans-serif;
+}
+
+.home-enquiry-strip p {
+    margin-bottom: 0;
+    color: #dbeafe;
+}
+
+.home-enquiry-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
 .page-hero {
     padding: 90px 0;
     color: #ffffff;
@@ -671,27 +1057,213 @@ h2 {
 /* =========================================================
    Rooms
    ========================================================= */
-.room-grid {
+.rooms-section {
+    background:
+        radial-gradient(circle at 90% 8%, rgba(18, 152, 232, 0.13), transparent 28%),
+        linear-gradient(180deg, #f8fbff, #eef6ff);
+}
+
+.section-heading,
+.gallery-intro {
     display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.55fr);
+    gap: 48px;
+    align-items: end;
+    margin-bottom: 40px;
+}
+
+.section-heading h2,
+.gallery-intro h2 {
+    max-width: 720px;
+    margin: 14px 0 0;
+    color: var(--primary-dark);
+    font: 800 clamp(2rem, 4vw, 3.4rem)/1.06 "Space Grotesk", sans-serif;
+    letter-spacing: -0.035em;
+}
+
+.section-heading > p,
+.gallery-intro > p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.room-showcase {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 28px;
 }
 
-.room-detail {
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 24px;
-    padding: 18px;
+.room-card {
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.room-detail img {
+.room-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 70px rgba(15, 23, 42, 0.18);
+}
+
+.room-media {
+    position: relative;
+    height: 340px;
+    overflow: hidden;
+}
+
+.room-media picture,
+.room-media img {
     width: 100%;
-    height: 360px;
-    object-fit: cover;
-    border-radius: 22px;
+    height: 100%;
+    display: block;
 }
 
-.room-detail div {
-    padding: 16px;
+.room-media img {
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.room-card:hover .room-media img {
+    transform: scale(1.045);
+}
+
+.room-media::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 45%;
+    background: linear-gradient(transparent, rgba(3, 15, 36, 0.62));
+}
+
+.room-badge {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    z-index: 1;
+    padding: 8px 13px;
+    color: #ffffff;
+    background: rgba(7, 27, 58, 0.68);
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    border-radius: var(--radius-pill);
+    backdrop-filter: blur(14px);
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+.room-content {
+    padding: 30px;
+}
+
+.room-title-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.room-kicker {
+    margin: 0 0 4px;
+    color: var(--primary);
+    font-size: 0.76rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.room-title-row h2 {
+    margin: 0;
+    color: var(--primary-dark);
+    font: 800 clamp(1.7rem, 3vw, 2.35rem)/1.1 "Space Grotesk", sans-serif;
+}
+
+.room-capacity {
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--primary), var(--primary-2));
+    border-radius: 18px;
+    font: 800 1rem "Space Grotesk", sans-serif;
+    box-shadow: 0 12px 24px rgba(11, 99, 206, 0.24);
+}
+
+.room-summary {
+    min-height: 52px;
+    color: var(--muted);
+}
+
+.room-amenities {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 24px 0 28px;
+    padding: 0;
+    list-style: none;
+}
+
+.room-amenities li {
+    display: flex;
+    gap: 9px;
+    color: #334155;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.room-amenities li span {
+    color: #16a34a;
+}
+
+.room-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.room-gallery-link {
+    color: var(--primary-dark);
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.rooms-note {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 16px;
+    align-items: center;
+    margin-top: 28px;
+    padding: 20px 24px;
+    color: #334155;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 22px;
+    box-shadow: var(--shadow-soft);
+}
+
+.rooms-note > span {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    color: #ffffff;
+    background: var(--primary);
+    border-radius: 50%;
+    font-weight: 900;
+}
+
+.rooms-note p {
+    margin: 0;
+}
+
+.rooms-note a {
+    color: var(--primary-dark);
+    font-weight: 900;
+    white-space: nowrap;
 }
 
 /* =========================================================
@@ -714,27 +1286,50 @@ h2 {
 /* =========================================================
    Gallery
    ========================================================= */
+.gallery-section {
+    background:
+        radial-gradient(circle at 12% 10%, rgba(18, 152, 232, 0.12), transparent 26%),
+        linear-gradient(180deg, #f8fbff, #edf5fd);
+}
+
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-flow: dense;
+    grid-auto-rows: 220px;
+    gap: 18px;
 }
 
 .gallery figure {
     position: relative;
-    height: 260px;
+    height: auto;
     margin: 0;
-    border-radius: 24px;
+    border-radius: 26px;
     overflow: hidden;
     cursor: pointer;
-    background: #ffffff;
-    box-shadow: 0 18px 38px rgba(15, 23, 42, 0.13);
+    background: #dbeafe;
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.13);
+    outline: none;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.gallery figure:nth-child(3n) {
-    height: 330px;
+.gallery figure:hover,
+.gallery figure:focus-visible {
+    z-index: 2;
+    transform: translateY(-6px);
+    box-shadow: 0 28px 60px rgba(7, 63, 136, 0.24);
 }
 
+.gallery-feature {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.gallery-wide {
+    grid-column: span 2;
+}
+
+.gallery picture,
 .gallery img {
     width: 100%;
     height: 100%;
@@ -749,14 +1344,41 @@ h2 {
 
 .gallery figcaption {
     position: absolute;
-    left: 12px;
-    right: 12px;
-    bottom: 12px;
-    padding: 10px;
-    border-radius: 16px;
+    left: 18px;
+    right: 18px;
+    bottom: 16px;
+    z-index: 2;
+    padding: 0;
     color: #ffffff;
-    background: linear-gradient(90deg, rgba(7, 63, 136, 0.86), rgba(11, 99, 206, 0.72));
     font-weight: 900;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65);
+}
+
+.gallery figure::before {
+    content: "";
+    position: absolute;
+    inset: 35% 0 0;
+    z-index: 1;
+    background: linear-gradient(transparent, rgba(3, 15, 36, 0.82));
+    pointer-events: none;
+}
+
+.gallery figure::after {
+    content: attr(data-category);
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 2;
+    padding: 6px 10px;
+    color: #eaf6ff;
+    background: rgba(7, 27, 58, 0.58);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: var(--radius-pill);
+    backdrop-filter: blur(12px);
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
 }
 
 /* =========================================================
@@ -768,10 +1390,115 @@ h2 {
 
 .map-card iframe {
     width: 100%;
-    height: 370px;
+    height: 100%;
+    min-height: 430px;
     display: block;
     border: 0;
     border-radius: 22px;
+}
+
+.location-section {
+    background:
+        radial-gradient(circle at 8% 18%, rgba(18, 152, 232, 0.12), transparent 28%),
+        linear-gradient(180deg, #f8fbff, #eef6ff);
+}
+
+.location-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+    gap: 38px;
+    align-items: center;
+    margin-bottom: 36px;
+}
+
+.location-intro h2,
+.directions-card h2 {
+    margin: 14px 0 12px;
+    color: var(--primary-dark);
+    font-family: "Space Grotesk", sans-serif;
+    line-height: 1.15;
+}
+
+.address-card,
+.directions-card {
+    background: var(--glass-strong);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+}
+
+.address-card {
+    display: flex;
+    gap: 16px;
+    padding: 24px;
+    font-style: normal;
+}
+
+.address-card div,
+.address-card span {
+    display: block;
+}
+
+.address-icon {
+    font-size: 1.7rem;
+}
+
+.location-grid {
+    grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+    align-items: stretch;
+    gap: 30px;
+}
+
+.directions-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(28px, 4vw, 44px);
+}
+
+.location-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.secondary {
+    color: var(--primary-dark);
+    background: #e0f2fe;
+    border: 1px solid rgba(11, 99, 206, 0.18);
+}
+
+.route-note {
+    margin: 20px 0 0;
+    color: var(--muted);
+    font-size: 0.86rem;
+}
+
+.map-overlay{
+
+    position:absolute;
+
+    left:20px;
+
+    bottom:20px;
+
+    padding:14px 22px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.88);
+
+    backdrop-filter:blur(16px);
+
+    font-weight:700;
+
+    color:#073f88;
+
+    box-shadow:
+
+        0 12px 30px rgba(0,0,0,.15);
+
 }
 
 /* =========================================================
@@ -782,9 +1509,42 @@ h2 {
     padding: 30px;
 }
 
+.elevated-panel {
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: var(--radius-lg);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.94));
+    box-shadow: var(--shadow-soft);
+}
+
 .contact-card a {
     color: var(--primary-dark);
     font-weight: 900;
+}
+
+.contact-card h2 {
+    margin: 6px 0 18px;
+}
+
+.contact-mini-links {
+    display: grid;
+    gap: 10px;
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.contact-mini-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px 14px;
+    border-radius: 14px;
+    background: rgba(18, 152, 232, 0.08);
+}
+
+.contact-mini-links a::after {
+    content: "→";
 }
 
 .enquiry-form {
@@ -810,6 +1570,50 @@ h2 {
     outline: none;
     border-color: rgba(18, 152, 232, 0.7);
     box-shadow: 0 0 0 5px rgba(18, 152, 232, 0.14);
+}
+
+.enquiry-guide {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 28px;
+    align-items: start;
+}
+
+.facility-note,
+.faq-section .section-heading p {
+    max-width: 720px;
+}
+
+.facilities-section .section-heading {
+    margin-bottom: 28px;
+}
+
+.faq-section .section-heading {
+    margin-bottom: 26px;
+}
+
+.faq-next-step {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 28px;
+    padding: 28px;
+    border-radius: var(--radius-lg);
+    background:
+        linear-gradient(135deg, rgba(7, 63, 136, 0.95), rgba(18, 152, 232, 0.9));
+    color: #ffffff;
+    box-shadow: var(--shadow-soft);
+}
+
+.faq-next-step h2,
+.faq-next-step .section-label {
+    color: #ffffff;
+}
+
+.faq-next-step .btn.ghost {
+    border-color: rgba(255, 255, 255, 0.45);
+    color: #ffffff;
 }
 
 /* =========================================================
@@ -850,10 +1654,29 @@ h2 {
     display: grid;
 }
 
+body.lightbox-active {
+    overflow: hidden;
+}
+
 .lightbox img {
     max-width: min(1100px, 94vw);
-    max-height: 82vh;
+    max-height: 78vh;
     border-radius: 22px;
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox p {
+    position: fixed;
+    left: 50%;
+    bottom: 22px;
+    margin: 0;
+    padding: 9px 16px;
+    transform: translateX(-50%);
+    color: #ffffff;
+    background: rgba(15, 23, 42, 0.62);
+    border-radius: var(--radius-pill);
+    backdrop-filter: blur(12px);
+    font-weight: 800;
 }
 
 .lightbox-close,
@@ -982,6 +1805,28 @@ footer {
     .footer-grid {
         grid-template-columns: 1fr;
     }
+
+    .section-heading,
+    .gallery-intro {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .room-showcase {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .location-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .map-card iframe {
+        min-height: 380px;
+    }
 }
 
 @media (max-width: 760px) {
@@ -1073,6 +1918,68 @@ footer {
 
     .gallery {
         grid-template-columns: 1fr;
+        grid-auto-rows: 270px;
+    }
+
+    .gallery-feature,
+    .gallery-wide {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .room-media {
+        height: 280px;
+    }
+
+    .room-content {
+        padding: 24px;
+    }
+
+    .room-amenities {
+        grid-template-columns: 1fr;
+    }
+
+    .room-actions,
+    .room-actions .btn {
+        width: 100%;
+    }
+
+    .room-gallery-link {
+        padding: 4px 0;
+    }
+
+    .rooms-note {
+        grid-template-columns: auto 1fr;
+    }
+
+    .rooms-note a {
+        grid-column: 2;
+    }
+
+    .section {
+        padding: 62px 0;
+    }
+
+    .page-hero {
+        padding: 64px 0;
+    }
+
+    .location-intro {
+        gap: 24px;
+    }
+
+    .distance-cards {
+        gap: 16px;
+        margin: 28px 0;
+    }
+
+    .map-card iframe {
+        min-height: 320px;
+    }
+
+    .location-actions,
+    .location-actions .btn {
+        width: 100%;
     }
 
     .whatsapp-float {
@@ -1287,5 +2194,42 @@ footer {
     .main-nav .nav-cta:hover,
     .main-nav .nav-cta.active {
         transform: translateY(-1px) scale(1.015);
+    }
+}
+
+@media (max-width: 980px) {
+    .home-enquiry-strip,
+    .enquiry-guide {
+        grid-template-columns: 1fr;
+    }
+
+    .home-enquiry-actions {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 760px) {
+    .hero-links {
+        gap: 8px;
+    }
+
+    .hero-links a {
+        font-size: 0.82rem;
+    }
+
+    .home-enquiry-actions,
+    .home-enquiry-actions .btn {
+        width: 100%;
+    }
+
+    .faq-next-step {
+        align-items: stretch;
+        flex-direction: column;
+        padding: 22px;
+    }
+
+    .contact-card,
+    .enquiry-form {
+        padding: 22px;
     }
 }

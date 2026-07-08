@@ -40,6 +40,8 @@ function gtag_report_conversion(url) {
   <meta content="View actual photos of rooms, bathrooms and building at Ashok Boys Hostel." property="og:description"/>
   <meta content="images/hero.jpg" property="og:image"/>
   <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+  <meta content="#0b63ce" name="theme-color"/>
+  <link href="manifest.json" rel="manifest"/>
   <link href="style.css" rel="stylesheet"/>
   <script type="application/ld+json">
    {
@@ -88,16 +90,6 @@ function gtag_report_conversion(url) {
     ]
 }
   </script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18298483586">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-18298483586');
-</script>
  </head>
  <body>
   <header class="site-header">
@@ -110,10 +102,10 @@ function gtag_report_conversion(url) {
       Ashok Boys Hostel
      </span>
     </a>
-    <button class="menu-toggle">
-     ☰
+    <button aria-controls="main-navigation" aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" type="button">
+     <span aria-hidden="true">☰</span>
     </button>
-    <nav class="main-nav">
+    <nav class="main-nav" id="main-navigation">
      <a href="index.html">
       Home
      </a>
@@ -171,10 +163,17 @@ function gtag_report_conversion(url) {
      </p>
     </div>
    </section>
-   <section class="section">
+   <section class="section gallery-section">
     <div class="container">
-     <div class="gallery">
-      <figure>
+     <div class="gallery-intro">
+      <div>
+       <p class="section-label">A closer look</p>
+       <h2>See the spaces before you visit</h2>
+      </div>
+      <p>Real, recent views of the rooms, shared bathrooms and hostel exterior. Select any photo for a larger view.</p>
+     </div>
+     <div class="gallery gallery-editorial">
+      <figure class="gallery-feature" data-category="Rooms" tabindex="0">
        <picture>
         <source srcset="images/room-four-sharing.webp" type="image/webp"/>
         <img alt="4 Sharing Room" decoding="async" loading="lazy" src="images/room-four-sharing.jpg"/>
@@ -183,7 +182,7 @@ function gtag_report_conversion(url) {
         4 Sharing Room
        </figcaption>
       </figure>
-      <figure>
+      <figure data-category="Rooms" tabindex="0">
        <picture>
         <source srcset="images/room-two-sharing.webp" type="image/webp"/>
         <img alt="2 Sharing Room" decoding="async" loading="lazy" src="images/room-two-sharing.jpg"/>
@@ -192,7 +191,7 @@ function gtag_report_conversion(url) {
         2 Sharing Room
        </figcaption>
       </figure>
-      <figure>
+      <figure data-category="Rooms" tabindex="0">
        <picture>
         <source srcset="images/room-wide.webp" type="image/webp"/>
         <img alt="Spacious Room" decoding="async" loading="lazy" src="images/room-wide.jpg"/>
@@ -201,7 +200,7 @@ function gtag_report_conversion(url) {
         Spacious Room
        </figcaption>
       </figure>
-      <figure>
+      <figure class="gallery-wide" data-category="Rooms" tabindex="0">
        <picture>
         <source srcset="images/room-four-beds.webp" type="image/webp"/>
         <img alt="Multiple Bed Room" decoding="async" loading="lazy" src="images/room-four-beds.jpg"/>
@@ -210,7 +209,7 @@ function gtag_report_conversion(url) {
         Multiple Bed Room
        </figcaption>
       </figure>
-      <figure>
+      <figure data-category="Rooms" tabindex="0">
        <picture>
         <source srcset="images/room-blue-wall.webp" type="image/webp"/>
         <img alt="Student Room" decoding="async" loading="lazy" src="images/room-blue-wall.jpg"/>
@@ -219,7 +218,7 @@ function gtag_report_conversion(url) {
         Student Room
        </figcaption>
       </figure>
-      <figure>
+      <figure data-category="Bathrooms" tabindex="0">
        <picture>
         <source srcset="images/bathroom-blue.webp" type="image/webp"/>
         <img alt="Blue Common Bathroom" decoding="async" loading="lazy" src="images/bathroom-blue.jpg"/>
@@ -228,7 +227,7 @@ function gtag_report_conversion(url) {
         Blue Common Bathroom
        </figcaption>
       </figure>
-      <figure>
+      <figure data-category="Bathrooms" tabindex="0">
        <picture>
         <source srcset="images/bathroom-orange.webp" type="image/webp"/>
         <img alt="Orange Common Bathroom" decoding="async" loading="lazy" src="images/bathroom-orange.jpg"/>
@@ -237,7 +236,7 @@ function gtag_report_conversion(url) {
         Orange Common Bathroom
        </figcaption>
       </figure>
-      <figure>
+      <figure class="gallery-wide" data-category="Bathrooms" tabindex="0">
        <picture>
         <source srcset="images/bathroom-blue-2.webp" type="image/webp"/>
         <img alt="Bathroom Facility" decoding="async" loading="lazy" src="images/bathroom-blue-2.jpg"/>
@@ -246,7 +245,7 @@ function gtag_report_conversion(url) {
         Bathroom Facility
        </figcaption>
       </figure>
-      <figure>
+      <figure data-category="Exterior" tabindex="0">
        <picture>
         <source srcset="images/building-angled.webp" type="image/webp"/>
         <img alt="Building Exterior" decoding="async" loading="lazy" src="images/building-angled.jpg"/>
@@ -255,7 +254,7 @@ function gtag_report_conversion(url) {
         Building Exterior
        </figcaption>
       </figure>
-      <figure>
+      <figure class="gallery-feature" data-category="Exterior" tabindex="0">
        <picture>
         <source srcset="images/hero.webp" type="image/webp"/>
         <img alt="Front View" decoding="async" loading="lazy" src="images/hero.jpg"/>
@@ -268,7 +267,7 @@ function gtag_report_conversion(url) {
     </div>
    </section>
    <div class="lightbox" id="lightbox">
-    <button class="lightbox-close">
+    <button aria-label="Close photo viewer" class="lightbox-close" type="button">
      &times;
     </button>
     <img alt="" src=""/>
