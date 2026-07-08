@@ -132,7 +132,7 @@ a {
     font-size: 1.35rem;
     font-weight: 800;
     color: var(--primary-dark);
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
 }
 
 /* Backward compatibility if old HTML still uses <span>ABH</span> */
@@ -717,7 +717,7 @@ h3 {
 h2 {
     font-size: clamp(1.9rem, 4vw, 3rem);
     line-height: 1.15;
-    letter-spacing: -0.035em;
+    letter-spacing: 0;
 }
 
 .stats {
@@ -1054,6 +1054,18 @@ h2 {
     color: #dbeafe;
 }
 
+.page-hero .eyebrow {
+    color: #073f88;
+    background: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    box-shadow: 0 10px 28px rgba(3, 15, 36, 0.2);
+    text-shadow: none;
+}
+
+.page-hero h1 {
+    text-shadow: 0 3px 18px rgba(3, 15, 36, 0.32);
+}
+
 /* =========================================================
    Rooms
    ========================================================= */
@@ -1076,9 +1088,10 @@ h2 {
 .gallery-intro h2 {
     max-width: 720px;
     margin: 14px 0 0;
-    color: var(--primary-dark);
+    color: #052f66;
     font: 800 clamp(2rem, 4vw, 3.4rem)/1.06 "Space Grotesk", sans-serif;
-    letter-spacing: -0.035em;
+    letter-spacing: 0;
+    text-wrap: balance;
 }
 
 .section-heading > p,
