@@ -2735,6 +2735,61 @@ h3,
     background: #1b1b1e;
 }
 
+.rooms-section {
+    background: #101113;
+}
+
+.rooms-heading .section-label {
+    color: #d6d6d6;
+}
+
+.rooms-heading h2 {
+    color: #ffffff;
+}
+
+.room-card {
+    background: #1b1b1e;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 7px;
+    box-shadow: var(--shadow-card);
+}
+
+.room-card:hover {
+    border-color: rgba(255, 255, 255, 0.16);
+    box-shadow: 0 24px 52px rgba(0, 0, 0, 0.46);
+}
+
+.room-badge {
+    border-radius: 3px;
+    background: rgba(229, 9, 20, 0.88);
+    border: 0;
+}
+
+.room-title-row h2 {
+    color: #ffffff;
+}
+
+.room-capacity {
+    border-radius: 5px;
+    background: var(--primary);
+    box-shadow: none;
+}
+
+.room-amenities li {
+    color: #d4d4d4;
+}
+
+.rooms-note {
+    color: #d4d4d4;
+    background: #202023;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 7px;
+}
+
+.rooms-note a {
+    color: #ffffff;
+}
+
 .room-media img,
 .room-detail > picture img,
 .room-detail > img {
