@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Replace YOUR-DOMAIN-HERE.com with the live domain before submitting to Google Search Console. -->
   <url>
-    <loc>https://YOUR-DOMAIN-HERE.com/</loc>
+    <loc>https://praveen03-ashok.github.io/ashok-boys-hostel/</loc>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN-HERE.com/rooms.html</loc>
+    <loc>https://praveen03-ashok.github.io/ashok-boys-hostel/rooms.html</loc>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN-HERE.com/facilities.html</loc>
+    <loc>https://praveen03-ashok.github.io/ashok-boys-hostel/facilities.html</loc>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN-HERE.com/gallery.html</loc>
+    <loc>https://praveen03-ashok.github.io/ashok-boys-hostel/gallery.html</loc>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN-HERE.com/location.html</loc>
+    <loc>https://praveen03-ashok.github.io/ashok-boys-hostel/location.html</loc>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN-HERE.com/faq.html</loc>
+    <loc>https://praveen03-ashok.github.io/ashok-boys-hostel/faq.html</loc>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN-HERE.com/contact.html</loc>
+    <loc>https://praveen03-ashok.github.io/ashok-boys-hostel/contact.html</loc>
   </url>
 </urlset>
