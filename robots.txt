@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Replace YOUR-DOMAIN-HERE.com with the live domain before production SEO submission.
-Sitemap: https://YOUR-DOMAIN-HERE.com/sitemap.xml
+Sitemap: https://praveen03-ashok.github.io/ashok-boys-hostel/sitemap.xml
